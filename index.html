@@ -2,15 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Superbin Demo</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <p id="classifier"></p>
+    <p id="time"></p>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <video id="player" controls autoplay></video>
+    <button id="capture">Capture</button>
+    <button id="save">Save</button>
+    <canvas id="snapshot" width="1920" height="1080"></canvas>
+    <img id="capture_img" width=70% height=70%></img>
+    <script src="./capture.js"></script>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
   </body>
 </html>
