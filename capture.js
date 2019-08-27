@@ -6,13 +6,15 @@ var saveButton = document.getElementById('save');
 var handleSuccess = function(stream) {
   // Attach the video stream to the video element and autoplay.
   player.srcObject = stream;
+  player.width = 720;
+  player.height = 480;
 };
 
 captureButton.addEventListener('click', function() {
     var context = snapshot.getContext('2d');
     // Draw the video frame to the canvas.
-    snapshotCanvas.style.display='none';
     context.drawImage(player, 0, 0, snapshotCanvas.width, snapshotCanvas.height);
+    snapshotCanvas.style.display='none';
 
     document.getElementById('capture_img').src = snapshotCanvas.toDataURL("image/png")
 });
@@ -36,4 +38,4 @@ saveButton.addEventListener('click', function() {
     });
 });
 
-navigator.mediaDevices.getUserMedia({video: {width:720, height:480}}).then(handleSuccess);
+navigator.mediaDevices.getUserMedia({video: {width:1920, height:1080}}).then(handleSuccess);

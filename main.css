@@ -1,0 +1,43 @@
+body{
+    background-image:url("images/bg.jpg");
+}
+
+.p-current-time{
+    font-size: 2.4em;
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+
+.p-model-name-EN{
+    font-size: 2em;
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+
+.p-model-name-KR{
+    font-size: 4.4em;
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+
+.p-out{
+    font-size: 4.4em;
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
+
+.btnDemo{
+    text-align: center;
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: #40FF00;
+    font-size: 4.4em;
+}
+
+.btnDemo:active{
+    background-color: #01DF01;
+}

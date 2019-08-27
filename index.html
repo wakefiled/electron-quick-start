@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <title>Superbin Demo</title>
   </head>
+  <link rel="stylesheet" href="./main.css">
   <body>
-    <p id="classifier"></p>
-    <p id="time"></p>
+    <p class="p-current-time">12:00 PM 수요일  03.26</p>
+    <p class="p-model-name-EN">Nephron_CP</p>
+    <p class="p-model-name-KR">캔/패트 (CAN/PET) 수거기</p>
+    <div id="divOutput">
+      <p id="classifier" class="p-out">ETC</p>
+      <p id="time" class="p-out">00:00:00</p>
+    </div>
+    <div id="divCapture">
+      <video id="player" width="720px" height="480px" controls autoplay></video>
+      <img id="capture_img" width="720px" height="400px"></img>
+      <canvas id="snapshot" width="1920" height="1080" hidden></canvas>
+    </div>
+    <div id="divInput">
+        <button id="capture" class="btnDemo">Capture</button>
+        <button id="save" class="btnDemo">Save</button>
+      </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <video id="player" controls autoplay></video>
-    <button id="capture">Capture</button>
-    <button id="save">Save</button>
-    <canvas id="snapshot" width="1920" height="1080"></canvas>
-    <img id="capture_img" width=70% height=70%></img>
     <script src="./capture.js"></script>
-
   </body>
 </html>
