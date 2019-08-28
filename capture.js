@@ -32,6 +32,10 @@ saveButton.addEventListener('click', function() {
     .then(function(response){
       document.getElementById('classifier').innerHTML = response.data.classifier;
       document.getElementById('time').innerHTML = response.data.time;
+      if ( response.data.image != "None" )
+      {
+          document.getElementById('capture_img').src = response.data.image;
+      }
     })
     .catch(function(error){
       console.log(error);
