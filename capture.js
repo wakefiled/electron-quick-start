@@ -25,7 +25,7 @@ saveButton.addEventListener('click', function() {
     //saveATag.download = 'jskim8.png'
     console.log('test');
     //const axios = require('axios');
-    axios.post('http://192.168.10.36:8080/jetson/cls/result',{
+    axios.post('http://192.168.35.4:8080/jetson/cls/result',{
       fileName:'jskim8.png',
       img: snapshotCanvas.toDataURL("image/png")
     })
